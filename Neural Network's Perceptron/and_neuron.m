@@ -27,7 +27,7 @@ for k=1:100
 			inputs=x(i:i,1:3);
 			y = hardlim(wOld*inputs');
 			if(target(i)~=y)
-				wNew = wOld' + (target(i)-y)*inputs';			
+				wNew = wOld' + (target(i)-y)*inputs';
 				counter=counter+1;
 			end
 			wOld= wNew';
@@ -48,7 +48,6 @@ for i = 1: row
 		class2=[class2;inputs(1:1,1:2)];
 	end
 end
-
 figure (1);
 %Plotting 1st cluster red
 x1=class1(:,1);
